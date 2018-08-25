@@ -23,3 +23,16 @@ Then("I should see list of my quotes") do
   expect(page).to have_content("If you tell the truth, you don't have to remember anything.")
   expect(page).to have_content("Be yourself; everyone else is already taken.")
 end
+
+When("I click Add quote button") do
+  click_link "Add new quote"
+end
+
+When("I submit filled in new quote form") do
+  fill_in("Text", with: "This is a brand new quote!")
+  click_button "Create Quote"
+end
+
+Then("I should see a new quote in the listing") do
+  expect(page).to have_content("This is a brand new quote!")
+end
