@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root to: "quotes#index"
 
-  resources :quote, only: [:index, :create, :new]
+  resources :quotes, only: %i[index create new]
 end

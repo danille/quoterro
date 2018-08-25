@@ -24,7 +24,7 @@ Then("I should see list of my quotes") do
   expect(page).to have_content("Be yourself; everyone else is already taken.")
 end
 
-When("I click Add quote button") do
+When("I click Add quote link") do
   click_link "Add new quote"
 end
 

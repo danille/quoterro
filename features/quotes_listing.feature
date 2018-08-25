@@ -10,6 +10,6 @@ Feature: Quotes List
 
   Scenario: Adding new quote
     Given I visit the homepage
-    When I click Add quote button
+    When I click Add quote link
     And I submit filled in new quote form
     Then I should see a new quote in the listing
