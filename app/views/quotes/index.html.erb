@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Quotes</h1>
+  <div class="row">
+    <div class="container">
+      <% @quotes.each do |quote| %>
+        <%= render 'quote_row', quote: quote %>
+      <% end %>
+    </div>
+  </div>
+</div>
