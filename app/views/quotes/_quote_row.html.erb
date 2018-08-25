@@ -2,4 +2,8 @@
   <p>
     <%= quote.text %>
   </p>
+
+  <cite>
+    <%= quote.created_at.strftime("%-d %B %Y") %>
+  </cite>
 </blockquote>
