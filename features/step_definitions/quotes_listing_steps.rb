@@ -29,7 +29,7 @@ When("I click Add quote link") do
 end
 
 When("I submit filled in new quote form") do
-  fill_in("Text", with: "This is a brand new quote!")
+  fill_in('id-quote-text', with: "This is a brand new quote!")
   click_button "Create Quote"
 end
 
