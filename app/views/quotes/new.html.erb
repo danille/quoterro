@@ -1,25 +1,33 @@
 <div class="form">
+  <h1>New Quote</h1>
   <%= form_for(@quote) do |f| %>
-
-    <% if @quote.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@quote.errors.count, "error") %> prohibited this product from being saved:</h2>
-        <ul>
-          <% @quote.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div align="center">
+          <% if @quote.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@quote.errors.count, "error") %> prohibited this product from being saved:</h2>
+              <ul>
+                <% @quote.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
           <% end %>
-        </ul>
+
+          <div class="field">
+            <%= f.text_area :text, class: "form-control", placeholder: "Put your quote here and make it immortal" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit class: "btn btn-success btn-block", id: "new-quote-button" %>
+          </div>
+
+          <%= link_to 'Back', quotes_path, class: "btn btn-primary btn-block" %>
+
+        </div>
       </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :text %>
-      <%= f.text_area :text %>
     </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-
   <% end %>
+
 </div>

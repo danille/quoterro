@@ -1,6 +1,12 @@
 <div class="container">
   <h1>Quotes</h1>
-  <%= link_to "Add new quote", new_quote_path %>
+
+  <h2>
+    <%= link_to new_quote_path, id: "new-quote-link" do %>
+      <span>Add new quote</span>
+    <% end %>
+  </h2>
+
   <div class="row">
     <div class="container">
       <% @quotes.each do |quote| %>
@@ -8,5 +14,6 @@
       <% end %>
     </div>
   </div>
+
   <%= will_paginate %>
 </div>
