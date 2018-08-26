@@ -1,24 +1,24 @@
-# README
+# Quoterro [![Build Status](https://travis-ci.org/danille/quoterro.svg?branch=master)](https://travis-ci.org/danille/quoterro)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple app to store quotes
 
-Things you may want to cover:
+## Installation
+Follow these steps to install and start the app:
+
+### Set up Rails app
+
+First, install the gems required by the application:
+
+    bundle install
+
+Next, execute the database migrations/schema setup:
+
+	bundle exec rake db:setup
+
+### Start the app
+
+    bundle exec rails server
+
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    - 2.5.1
